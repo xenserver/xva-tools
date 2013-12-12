@@ -94,7 +94,7 @@ def make_xva(output_path, sparse, ova_xml_path, disk_path, disk_reference):
             basefilename = basefilename + 1
     output_file.close()
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description='XVA generator')
     parser.add_argument(
         '--output_path', '-o', required=True, help='Output xva path')
