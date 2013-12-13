@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="pyxva",
@@ -10,7 +10,7 @@ setup(
         "rob.dobson@citrix.com",
         "mate.lakat@citrix.com"]),
     url="http://unspecified.yet",
-    packages=["pyxva"],
+    packages=find_packages(),
     install_requires=[],
     tests_require=[
         "nose"
