@@ -5,6 +5,7 @@ import tarfile
 
 from xva import open_xva
 
+
 def update(args):
     mxva = open_xva(args.xva_file)
 
@@ -17,8 +18,11 @@ def update(args):
     with open(args.output, 'w') as fh:
         mxva.save(fh)
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Tool for updating XVA metadata")
+    parser = argparse.ArgumentParser(
+        description="Tool for updating XVA metadata"
+    )
     parser.add_argument("-f", "--file",
                         dest="xva_file",
                         required=True,

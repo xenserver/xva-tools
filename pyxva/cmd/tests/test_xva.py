@@ -4,6 +4,7 @@ import os
 from mock import MagicMock, patch
 from pyxva.cmd import xva
 
+
 class TestXVAUpdate(unittest.TestCase):
 
     OVA_XML = "data/ova.xml"
@@ -11,7 +12,10 @@ class TestXVAUpdate(unittest.TestCase):
     @patch("pyxva.cmd.xva.extract_xva")
     def setUp(self, mock_extract):
 
-        ova_xml_path = "%s/%s" % (os.path.dirname(os.path.realpath(__file__)), self.OVA_XML)
+        ova_xml_path = "%s/%s" % (
+            os.path.dirname(os.path.realpath(__file__)),
+            self.OVA_XML
+        )
         with open(ova_xml_path, 'r') as fh:
             ova_data = fh.read()
 
