@@ -19,6 +19,7 @@ setup(
     entry_points={
         'console_scripts': [
             'mkxva = pyxva.cmd.mkxva:main',
+            'xva-update = pyxva.cmd.xvaupdate:main',
         ]
     },
 )
